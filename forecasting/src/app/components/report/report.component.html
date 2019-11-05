@@ -1,0 +1,24 @@
+<h4>Forecasting report for {{forecastStartDate}} </h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>User Id</th>
+      <th>Title</th>
+      <th [attr.colspan]="filterData.historyWeek">History</th>
+      <th [attr.colspan]="filterData.forecastWeek">Forecast</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prouct of prouctList">
+      <td>{{prouct.id}}</td>
+      <td>{{prouct.userId}}</td>
+      <td>{{prouct.title}}</td>
+      <td *ngFor="let historyWeek of historyWeeks">{{historyWeek}}</td>
+      <td *ngFor="let forecastWeek of forecastWeeks">{{forecastWeek}}</td>
+      <td>Summary</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,5 @@
+<div class="container-fluid filter">
+    <app-filter (filterChange)="applyChange($event)"></app-filter>
+    <hr>
+    <app-report *ngIf="filterData" [filterData]="filterData"></app-report>
+</div>

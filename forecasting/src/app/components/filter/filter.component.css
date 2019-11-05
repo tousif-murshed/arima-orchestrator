@@ -1,0 +1,12 @@
+
+
+.weeks {
+    max-width: 25px;
+    margin-left: 5px;
+}
+
+.dateField {
+    max-width: 120px;
+    margin-left: 5px;
+    max-height: 10px;
+}
