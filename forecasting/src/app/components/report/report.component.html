@@ -1,24 +1,38 @@
-<h4>Forecasting report for {{forecastStartDate}} </h4>
+<h4>Forecasting report for {{forecastStartDate}} : ARIMA</h4>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Id</th>
-      <th>User Id</th>
-      <th>Title</th>
+      <th>#</th>
+      <th>Product Name</th>
       <th [attr.colspan]="filterData.historyWeek">History</th>
       <th [attr.colspan]="filterData.forecastWeek">Forecast</th>
       <th>Summary</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let prouct of prouctList">
-      <td>{{prouct.id}}</td>
-      <td>{{prouct.userId}}</td>
-      <td>{{prouct.title}}</td>
-      <td *ngFor="let historyWeek of historyWeeks">{{historyWeek}}</td>
-      <td *ngFor="let forecastWeek of forecastWeeks">{{forecastWeek}}</td>
+    <tr *ngFor="let product of productList; let i=index;">
+      <td>{{i+1}}</td>
+      <td>
+        <button type="button" class="btn btn-link" (click)="openChartsModal(commentsModal)">
+          {{product.itemName}} ({{product.itemNumber}})
+        </button>
+      </td>
+      <td *ngFor="let history of historyWeeks; let h=index;">{{product.history[h]?.unitSold}}</td>
+      <td *ngFor="let forecast of forecastWeeks; let f=index;">{{product.forecast[f]?.unitSold}}</td>
       <td>Summary</td>
     </tr>
   </tbody>
 </table>
+
+<ng-template #commentsModal>
+  <div class="modal-header">
+    <p>Chart</p>
+  </div>
+  <div class="modal-body">
+    Sample Model
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="closeModal()">Close</button>
+  </div>
+</ng-template>

@@ -11,6 +11,7 @@ import { MatNativeDateModule, MatSliderModule, MatFormFieldModule, MatInputModul
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import {  HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,8 @@ import {  HttpClientModule } from '@angular/common/http';
     MatSliderModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    ModalModule.forRoot(),
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

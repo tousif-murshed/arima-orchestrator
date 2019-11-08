@@ -16,6 +16,5 @@ export class AppComponent implements OnInit {
 
   applyChange(data: any) {
     this.filterData = data;
-    console.log('app', data);
   }
 }

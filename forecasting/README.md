@@ -1,26 +1,26 @@
 # Forecasting
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+Following are the steps to run application
 
-## Development server
+## Following steps need to perform in order to run application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Build 
+
+Run `npm run build` for a dev server. This will generate build package using `ng build --prod --optimization=true`
+
+## Start Node server
+
+Run `npm run server` for a dev server. Navigate to `http://localhost:3500/`. The app will not automatically reload if you change any of the source files you needs to executre `npm run build`.
+
+## Watch Changes During Development
+
+Run `npm run client` for a dev server. This will generate build package using `ng build --watch`. This will automatically generate dist folder if you change any of the source files.
+
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 

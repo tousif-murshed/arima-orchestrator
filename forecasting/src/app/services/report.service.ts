@@ -7,15 +7,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ReportService {
 
-
-
-  apiUrl = 'https://jsonplaceholder.typicode.com/';
+  // apiUrl = 'api/';
+  apiUrl = 'assets/';
   constructor(private http: HttpClient) { }
 
+  // This methos will connect to api/mongo of server.js
+  // getProductAttributes(): Observable<any> {
+  //   return this.http.get(this.apiUrl + 'mongo');
+  // }
+
+  // To-Do : Mock JSON created for getting response.
   getProductAttributes(): Observable<any> {
-    return this.http.get(this.apiUrl + 'posts');
+    return this.http.get(this.apiUrl + 'data.json');
   }
-
-
-
 }

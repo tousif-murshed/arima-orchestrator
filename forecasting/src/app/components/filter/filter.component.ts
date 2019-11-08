@@ -14,6 +14,7 @@ export class FilterComponent implements OnInit {
   historyWeek: any;
   forecastStartDate: Date;
   forecastWeek: any;
+  channel: any;
 
   constructor() { }
 
@@ -21,8 +22,10 @@ export class FilterComponent implements OnInit {
     this.minDate = new Date();
     this.historyStartDate = new Date();
     this.forecastStartDate = new Date();
-    this.historyWeek = '1';
-    this.forecastWeek = '1';
+    this.historyWeek = '4';
+    this.forecastWeek = '4';
+    this.channel = 'onLine';
+    this.applyChange();
   }
 
   applyChange() {

@@ -11,6 +11,15 @@
     <label>No of Weeks </label>
     <input type="text" class="weeks" name="historyWeek" [(ngModel)]="historyWeek" />
   </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="channel">Channel</label>
+      <select name="channel" class="channel" [(ngModel)]="channel">
+        <option value='onLine'>Online</option>
+        <option value='inStore'>In-store</option>
+      </select>
+    </div>
+  </div>
 </div>
 <div class="row">
   <div class="col-md-3">

@@ -1,0 +1,86 @@
+[
+    {
+        "_id": "5dc4c9fe7e21cecd411cca31",
+        "itemNumber": "1000111",
+        "itemName": "Brand XXX Phone -US",
+        "channel": "111",
+        "history": [
+            {
+                "week": 1,
+                "unitSold": 1100
+            },
+            {
+                "week": 2,
+                "unitSold": 800
+            },
+            {
+                "week": 3,
+                "unitSold": 1000
+            },
+            {
+                "week": 4,
+                "unitSold": 1400
+            }
+        ],
+        "forecast": [
+            {
+                "week": 1,
+                "unitSold": 1100
+            },
+            {
+                "week": 2,
+                "unitSold": 800
+            },
+            {
+                "week": 3,
+                "unitSold": 1000
+            },
+            {
+                "week": 4,
+                "unitSold": 1400
+            }
+        ]
+    },
+    {
+        "_id": "5dc4c9fe7e21cecd411cca32",
+        "itemNumber": "1000112",
+        "itemName": "Brand YYY Laptop -US",
+        "channel": "111",
+        "history": [
+            {
+                "week": 1,
+                "unitSold": 1100
+            },
+            {
+                "week": 2,
+                "unitSold": 800
+            },
+            {
+                "week": 3,
+                "unitSold": 1000
+            },
+            {
+                "week": 4,
+                "unitSold": 1400
+            }
+        ],
+        "forecast": [
+            {
+                "week": 1,
+                "unitSold": 1100
+            },
+            {
+                "week": 2,
+                "unitSold": 800
+            },
+            {
+                "week": 3,
+                "unitSold": 1000
+            },
+            {
+                "week": 4,
+                "unitSold": 1400
+            }
+        ]
+    }
+]
