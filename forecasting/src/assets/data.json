@@ -44,7 +44,7 @@
         "summary": [
             {
                 "month": "Jan",
-                "value": 1100
+                "unitSold": 1100
             },
             {
                 "month": "Feb",
@@ -137,7 +137,7 @@
         "summary": [
             {
                 "month": "Jan",
-                "value": 1100
+                "unitSold": 1100
             },
             {
                 "month": "Feb",
