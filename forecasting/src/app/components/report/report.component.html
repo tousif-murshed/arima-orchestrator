@@ -25,14 +25,155 @@
   </tbody>
 </table>
 
+<div class="flex">
+  <div class="labels">
+    <span class="label"></span>
+    <span class="label"><strong>Product Name</strong></span>
+    <span class="label product-link " (click)="openChartsModal(commentsModal)">
+      Brand XXX Phone -Us
+    </span>
+    <span class="label product-link" (click)="openChartsModal(commentsModal)">
+      Brand XXX Laptop -US
+    </span>
+  </div>
+  <div class="overflow">
+    <table>
+      <tr>
+        <th colspan="11" class="long">History</th>
+      </tr>
+      <tr>
+        <th class="long">Week 1</th>
+        <th class="long">Week 2</th>
+        <th class="long">Week 3</th>
+        <th class="long">Week 4</th>
+        <th class="long">Week 5</th>
+        <th class="long">Week 6</th>
+        <th class="long">Week 7</th>
+        <th class="long">Week 8</th>
+        <th class="long">Week 9</th>
+        <th class="long">Week 10</th>
+        <th class="long">Week 11</th>
+      </tr>
+      <tr>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+      </tr>
+      <tr>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+      </tr>
+
+    </table>
+  </div>
+  <div class="overflow">
+    <table>
+      <tr>
+        <th colspan="4" class="long">Forecast</th>
+      </tr>
+      <tr>
+        <th class="long">Week 1</th>
+        <th class="long">Week 2</th>
+        <th class="long">Week 3</th>
+        <th class="long">Week 4</th>
+      </tr>
+      <tr>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+      </tr>
+      <tr>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+        <td class="long">1</td>
+      </tr>
+    </table>
+  </div>
+  <div class="overflow">
+    <table>
+      <tr>
+        <th colspan="12" class="long">Summary</th>
+      </tr>
+      <tr>
+        <th class="long">Jan</th>
+        <th class="long">Feb</th>
+        <th class="long">Mar</th>
+        <th class="long">Apr</th>
+        <th class="long">May</th>
+        <th class="long">Jun</th>
+        <th class="long">Jul</th>
+        <th class="long">Aug</th>
+        <th class="long">Sep</th>
+        <th class="long">Oct</th>
+        <th class="long">Nov</th>
+        <th class="long">Dec</th>
+      </tr>
+      <tr>
+        <td class="long">Jan</td>
+        <td class="long">Feb</td>
+        <td class="long">Mar</td>
+        <td class="long">Apr</td>
+        <td class="long">May</td>
+        <td class="long">Jun</td>
+        <td class="long">Jul</td>
+        <td class="long">Aug</td>
+        <td class="long">Sep</td>
+        <td class="long">Oct</td>
+        <td class="long">Nov</td>
+        <td class="long">Dec</td>
+      </tr>
+      <tr>
+        <td class="long">Jan</td>
+        <td class="long">Feb</td>
+        <td class="long">Mar</td>
+        <td class="long">Apr</td>
+        <td class="long">May</td>
+        <td class="long">Jun</td>
+        <td class="long">Jul</td>
+        <td class="long">Aug</td>
+        <td class="long">Sep</td>
+        <td class="long">Oct</td>
+        <td class="long">Nov</td>
+        <td class="long">Dec</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
 <ng-template #commentsModal>
   <div class="modal-header">
-    <p>Chart</p>
+    <!-- <p>Chart</p> -->
+    <h4>Brand XXX Phone -Us</h4>
+    <p>ARIMA</p>
   </div>
   <div class="modal-body">
-    Sample Model
+    <div class="content">
+      <!-- <div class="chart" id="salesTrends"></div> -->
+      <app-line-chart [data]="productList"></app-line-chart>
+    </div>
+
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-default" (click)="closeModal()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="modalRef.hide()">Close</button>
   </div>
 </ng-template>

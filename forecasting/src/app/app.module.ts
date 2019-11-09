@@ -10,14 +10,16 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MatSliderModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { LineChartComponent } from './componets/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterComponent,
-    ReportComponent
+    ReportComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,

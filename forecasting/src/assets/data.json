@@ -4,6 +4,7 @@
         "itemNumber": "1000111",
         "itemName": "Brand XXX Phone -US",
         "channel": "111",
+        "methodology": "Arima",
         "history": [
             {
                 "week": 1,
@@ -37,6 +38,56 @@
             },
             {
                 "week": 4,
+                "unitSold": 1400
+            }
+        ],
+        "summary": [
+            {
+                "month": "Jan",
+                "value": 1100
+            },
+            {
+                "month": "Feb",
+                "unitSold": 800
+            },
+            {
+                "month": "Mar",
+                "unitSold": 1000
+            },
+            {
+                "month": "Apr",
+                "unitSold": 1400
+            },
+            {
+                "month": "May",
+                "unitSold": 1400
+            },
+            {
+                "month": "June",
+                "unitSold": 1400
+            },
+            {
+                "month": "July",
+                "unitSold": 1400
+            },
+            {
+                "month": "Aug",
+                "unitSold": 1400
+            },
+            {
+                "month": "Sep",
+                "unitSold": 1400
+            },
+            {
+                "month": "Oct",
+                "unitSold": 1400
+            },
+            {
+                "month": "Nov",
+                "unitSold": 1400
+            },
+            {
+                "month": "Dec",
                 "unitSold": 1400
             }
         ]
@@ -46,6 +97,7 @@
         "itemNumber": "1000112",
         "itemName": "Brand YYY Laptop -US",
         "channel": "111",
+        "methodology": "Arima",
         "history": [
             {
                 "week": 1,
@@ -79,6 +131,56 @@
             },
             {
                 "week": 4,
+                "unitSold": 1400
+            }
+        ],
+        "summary": [
+            {
+                "month": "Jan",
+                "value": 1100
+            },
+            {
+                "month": "Feb",
+                "unitSold": 800
+            },
+            {
+                "month": "Mar",
+                "unitSold": 1000
+            },
+            {
+                "month": "Apr",
+                "unitSold": 1400
+            },
+            {
+                "month": "May",
+                "unitSold": 1400
+            },
+            {
+                "month": "June",
+                "unitSold": 1400
+            },
+            {
+                "month": "July",
+                "unitSold": 1400
+            },
+            {
+                "month": "Aug",
+                "unitSold": 1400
+            },
+            {
+                "month": "Sep",
+                "unitSold": 1400
+            },
+            {
+                "month": "Oct",
+                "unitSold": 1400
+            },
+            {
+                "month": "Nov",
+                "unitSold": 1400
+            },
+            {
+                "month": "Dec",
                 "unitSold": 1400
             }
         ]

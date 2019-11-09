@@ -1,0 +1,52 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    min-width: 756px;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd
+}
+
+.overflow {
+    overflow-x: scroll;
+    min-width: 300px;
+    flex: 1;
+    border: 1px solid #ddd
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 5px;
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    border-right: 2px solid #ddd;
+}
+
+.label:last-of-type {
+    overflow-x: scroll;
+    border-bottom: 0;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.flex {
+    display: flex;
+    max-width: 100%;
+    padding: 0;
+    /* border: 5px solid #ddd; */
+}
+
+.product-link {
+    color: #007bff;
+    cursor: pointer;
+}

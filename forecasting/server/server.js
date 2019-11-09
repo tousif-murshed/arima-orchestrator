@@ -30,44 +30,6 @@ let initAPI = (app) => {
 
 
 let initMiddleware = (app) => {
-  //setup JWT parsing
-  // console.log("Dir: " + path.join(__dirname, '/../config/'));
-  // console.log("Dir: " + path.resolve(__dirname, '/../config/'));
-
-  // app.use((req, res, next) => {
-
-  //   if (req.get('boeingbemsid')) {
-  //     req.jwt = {
-  //       "bemsId": req.get('boeingbemsid'),
-  //       "email": req.get('mail'),
-  //       "friendlyName": req.get('boeingdisplayname'),
-  //       "boeingPerson": req.get('boeinguspersonstatus'),
-  //       "usPerson": req.get('boeingpersontype'),
-  //       "manager": req.get('manager')
-  //     };
-  //   } else {
-  //     //This should throw Un authorized error
-  //     req.jwt = {
-  //       "bemsId": "2756305",
-  //       "email": "nitin.j.punnen@boeing.com",
-  //       "friendlyName": "Punnen (US), Nitin J",
-  //       "boeingPerson": "Y",
-  //       "usPerson": "Y",
-  //       "manager": "Y"
-  //     };
-  //   }
-
-
-  //   const validationOptions = {
-  //     issuer: 'DigitalAscentHub',
-  //     expiresIn: 86400,
-  //     algorithm: 'RS512'
-  //   };
-
-  //   var token = jwt.sign(req.jwt, pkcs8PrivateKey, validationOptions);
-  //   req.token = token;
-  //   next();
-  // });
 
   app.use(cors());
   app.use(bodyParser.json());
