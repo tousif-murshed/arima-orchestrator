@@ -30,14 +30,16 @@ export class LineChartComponent implements OnChanges {
     const historyWeeks = [];
     const forecastWeeks = [];
 
+    let historyCnt = 1;
     chartData.history.forEach(data => {
       history.push(data.unitSold);
-      historyWeeks.push('Week ' + data.week);
+      historyWeeks.push('Week ' + historyCnt++);
     });
 
+    let forecastCnt = 1;
     chartData.forecast.forEach(data => {
       forecast.push(data.unitSold);
-      forecastWeeks.push('Week ' + data.week);
+      forecastWeeks.push('Week ' + forecastCnt++);
     });
 
     let categories = historyWeeks;

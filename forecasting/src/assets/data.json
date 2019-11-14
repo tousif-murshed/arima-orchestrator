@@ -1,211 +1,133 @@
 [
     {
-        "_id": "5dc4c9fe7e21cecd411cca31",
-        "itemNumber": "1000111",
-        "itemName": "Brand XXX Phone -US",
+        "itemNumber": "1000122",
+        "itemName": "iPhoneXs",
         "channel": "111",
-        "methodology": "Arima",
+        "methodology": "ARIMA",
         "history": [
             {
-                "week": 1,
-                "unitSold": 1100
+                "week": 12,
+                "unitSold": 1792
             },
             {
-                "week": 2,
-                "unitSold": 800
+                "week": 13,
+                "unitSold": 3800
             },
             {
-                "week": 3,
-                "unitSold": 1000
+                "week": 14,
+                "unitSold": 3400
             },
             {
-                "week": 4,
-                "unitSold": 1400
+                "week": 15,
+                "unitSold": 3800
             },
             {
-                "week": 2,
-                "unitSold": 800
+                "week": 16,
+                "unitSold": 3400
             },
             {
-                "week": 3,
-                "unitSold": 1000
-            },
-            {
-                "week": 4,
-                "unitSold": 1400
-            },
-            {
-                "week": 2,
-                "unitSold": 800
-            },
-            {
-                "week": 3,
-                "unitSold": 1000
-            },
-            {
-                "week": 4,
-                "unitSold": 1400
+                "week": 17,
+                "unitSold": 1640
             }
         ],
         "forecast": [
             {
-                "week": 1,
-                "unitSold": 1000
+                "week": 45,
+                "unitSold": 501
             },
             {
-                "week": 2,
-                "unitSold": 400
+                "week": 46,
+                "unitSold": 3699
             },
             {
-                "week": 3,
-                "unitSold": 10
+                "week": 47,
+                "unitSold": 3676
             },
             {
-                "week": 4,
-                "unitSold": 1300
+                "week": 48,
+                "unitSold": 3772
+            },
+            {
+                "week": 49,
+                "unitSold": 3158
             }
         ],
         "summary": [
             {
-                "month": "Jan",
-                "unitSold": 1100
-            },
-            {
-                "month": "Feb",
-                "unitSold": 800
-            },
-            {
-                "month": "Mar",
-                "unitSold": 1000
-            },
-            {
-                "month": "Apr",
-                "unitSold": 1400
-            },
-            {
-                "month": "May",
-                "unitSold": 1400
-            },
-            {
-                "month": "June",
-                "unitSold": 1400
-            },
-            {
-                "month": "July",
-                "unitSold": 1400
-            },
-            {
-                "month": "Aug",
-                "unitSold": 1400
-            },
-            {
-                "month": "Sep",
-                "unitSold": 1400
-            },
-            {
-                "month": "Oct",
-                "unitSold": 1400
-            },
-            {
+                "year": 2019,
                 "month": "Nov",
-                "unitSold": 1400
+                "unitSold": 12129
             },
             {
+                "year": 2019,
                 "month": "Dec",
-                "unitSold": 1400
+                "unitSold": 2677
             }
         ]
     },
     {
-        "_id": "5dc4c9fe7e21cecd411cca32",
-        "itemNumber": "1000112",
-        "itemName": "Brand YYY Laptop -US",
+        "itemNumber": "1000122",
+        "itemName": "iPhoneXR",
         "channel": "111",
-        "methodology": "Arima",
+        "methodology": "ARIMA",
         "history": [
             {
-                "week": 1,
-                "unitSold": 1100
+                "week": 12,
+                "unitSold": 1792
             },
             {
-                "week": 2,
-                "unitSold": 800
+                "week": 13,
+                "unitSold": 3800
             },
             {
-                "week": 3,
-                "unitSold": 1000
+                "week": 14,
+                "unitSold": 3400
             },
             {
-                "week": 4,
-                "unitSold": 1400
+                "week": 15,
+                "unitSold": 3800
+            },
+            {
+                "week": 16,
+                "unitSold": 3400
+            },
+            {
+                "week": 17,
+                "unitSold": 1640
             }
         ],
         "forecast": [
             {
-                "week": 1,
-                "unitSold": 1100
+                "week": 45,
+                "unitSold": 501
             },
             {
-                "week": 2,
-                "unitSold": 800
+                "week": 46,
+                "unitSold": 3699
             },
             {
-                "week": 3,
-                "unitSold": 1000
+                "week": 47,
+                "unitSold": 3676
             },
             {
-                "week": 4,
-                "unitSold": 1400
+                "week": 48,
+                "unitSold": 3772
+            },
+            {
+                "week": 49,
+                "unitSold": 3158
             }
         ],
         "summary": [
             {
-                "month": "Jan",
-                "unitSold": 1100
-            },
-            {
-                "month": "Feb",
-                "unitSold": 800
-            },
-            {
-                "month": "Mar",
-                "unitSold": 1000
-            },
-            {
-                "month": "Apr",
-                "unitSold": 1400
-            },
-            {
-                "month": "May",
-                "unitSold": 1400
-            },
-            {
-                "month": "June",
-                "unitSold": 1400
-            },
-            {
-                "month": "July",
-                "unitSold": 1400
-            },
-            {
-                "month": "Aug",
-                "unitSold": 1400
-            },
-            {
-                "month": "Sep",
-                "unitSold": 1400
-            },
-            {
-                "month": "Oct",
-                "unitSold": 1400
-            },
-            {
+                "year": 2019,
                 "month": "Nov",
-                "unitSold": 1400
+                "unitSold": 12129
             },
             {
+                "year": 2019,
                 "month": "Dec",
-                "unitSold": 1400
+                "unitSold": 2677
             }
         ]
     }
