@@ -21,33 +21,45 @@ export class LineChartComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
-    // if (changes.data) {
-      this.drawChart(changes.data.currentValue);
-    // }
+    this.drawChart(changes.data.currentValue);
   }
 
   drawChart(chartData: any) {
+    const history = [];
+    const forecast = [];
+    const historyWeeks = [];
+    const forecastWeeks = [];
+
+    chartData.history.forEach(data => {
+      history.push(data.unitSold);
+      historyWeeks.push('Week ' + data.week);
+    });
+
+    chartData.forecast.forEach(data => {
+      forecast.push(data.unitSold);
+      forecastWeeks.push('Week ' + data.week);
+    });
+
+    let categories = historyWeeks;
+
+    if (forecastWeeks.length > historyWeeks.length) {
+      categories = forecastWeeks;
+    }
+
     if (!this.chart) {
       setTimeout(() => {
         this.chart = c3.generate({
           bindto: '#' + this.divId,
           data: {
             columns: [
-              ['History', 1100, 800, 1000, 1400],
-              ['Forecast', 1500, 900, 1200, 1600]
+              ['History', ...history],
+              ['Forecast', ...forecast]
             ],
             type: 'line'
           },
           tooltip: {
             format: {
               value: function (value, ratio, id) {
-                // if (value > 100000) {
-                //   return d3.format('$,.1f')(value / 1000000) + 'Mn';
-                // } else if (value > 100) {
-                //   return d3.format('$,.1f')(value / 1000) + 'K';
-                // } else {
-                //   return d3.format('$,.1f')(value);
-                // }
                 return d3.format(',')(value);
               }
             }
@@ -58,7 +70,7 @@ export class LineChartComponent implements OnChanges {
           axis: {
             x: {
               type: 'category',
-              categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+              categories: categories,
               tick: {
                 rotate: 70,
                 multiline: false

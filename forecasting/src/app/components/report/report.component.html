@@ -1,90 +1,84 @@
-<h4>Forecasting report for {{forecastStartDate}} : ARIMA (Option 1)</h4>
+<h4>Forecasting report for {{forecastStartDate}} : ARIMA</h4>
+<div class="flex" *ngIf="productList && productList.length > 0">
+  <div class="outsitediv">
+    <div class="divHeader">
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Product Name</th>
-      <th [attr.colspan]="filterData.historyWeek">History</th>
-      <th [attr.colspan]="filterData.forecastWeek">Forecast</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of productList; let i=index;">
-      <td>{{i+1}}</td>
-      <td>
-        <button type="button" class="btn btn-link" (click)="openChartsModal(commentsModal)">
-          {{product.itemName}} ({{product.itemNumber}})
-        </button>
-      </td>
-      <td *ngFor="let history of historyWeeks; let h=index;">{{product.history[h]?.unitSold}}</td>
-      <td *ngFor="let forecast of forecastWeeks; let f=index;">{{product.forecast[f]?.unitSold}}</td>
-      <td>Summary</td>
-    </tr>
-  </tbody>
-</table>
-<h4>Forecasting report for {{forecastStartDate}} : ARIMA (Option 2)</h4>
-<div class="flex">
-  <div class="labels">
-    <span class="label"></span>
-    <span class="label"><strong>Product Name</strong></span>
-    <span class="label product-link " (click)="openChartsModal(commentsModal)" *ngFor="let product of productList;">
-      {{product.itemName}} ({{product.itemNumber}})
-    </span>
-  </div>
-  <div class="overflow">
-    <table>
-      <tr>
-        <th [attr.colspan]="filterData.historyWeek" class="long">History</th>
-      </tr>
-      <tr>
-        <th class="long" *ngFor="let history of productList[0].history;">Week {{history.week}}</th>
-      </tr>
-      <tr *ngFor="let product of productList;">
-        <td class="long" *ngFor="let history of product.history;">{{history.unitSold}}</td>
-      </tr>
-    </table>
-  </div>
-  <div class="overflow">
-    <table>
-      <tr>
-        <th [attr.colspan]="filterData.forecastWeek" class="long">Forecast</th>
-      </tr>
-      <tr>
-        <th class="long" *ngFor="let forecast of productList[0].forecast;">Week {{forecast.week}}</th>
-      </tr>
-      <tr *ngFor="let product of productList;">
-        <td class="long" *ngFor="let forecast of product.forecast;">{{forecast.unitSold}}</td>
-      </tr>
-    </table>
-  </div>
-  <div class="overflow">
-    <table>
-      <tr>
-        <th [attr.colspan]="productList[0].summary.length" class="long">Summary</th>
-      </tr>
-      <tr>
-        <th class="long" *ngFor="let summaryMonth of productList[0].summary;">{{summaryMonth.month}}</th>
-      </tr>
-      <tr *ngFor="let product of productList;">
-        <td class="long" *ngFor="let summary of product.summary;">{{summary.unitSold}}</td>
-      </tr>
-    </table>
+    </div>
+    <div class="overflow">
+      <table>
+        <tr>
+          <th style="text-align: left;" class="long">Product Name</th>
+        </tr>
+        <tr *ngFor="let product of productList;">
+          <td style="text-align: left;" class="long">
+            <span class="product-link" (click)="openChartsModal(commentsModal,product )">
+              {{product.itemName}} ({{product.itemNumber}})
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
+  <div class="outsitediv">
+    <div class="divHeader">
+      <label>History</label>
+    </div>
+
+    <div class="overflow">
+      <table>
+        <tr>
+          <th class="long" *ngFor="let history of productList[0].history;">Week {{history.week}}</th>
+        </tr>
+        <tr *ngFor="let product of productList;">
+          <td class="long" *ngFor="let history of product.history;">{{history.unitSold}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="outsitediv">
+    <div class="divHeader">
+      <label>Forecast</label>
+    </div>
+    <div class="overflow">
+      <table>
+        <tr>
+          <th class="long" *ngFor="let forecast of productList[0].forecast;">Week {{forecast.week}}</th>
+        </tr>
+        <tr *ngFor="let product of productList;">
+          <td class="long" *ngFor="let forecast of product.forecast;">{{forecast.unitSold}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="outsitediv">
+    <div class="divHeader">
+      <label>Summary</label>
+    </div>
+
+    <div class="overflow">
+      <table>
+        <tr>
+          <th class="long" *ngFor="let summaryMonth of productList[0].summary;">{{summaryMonth.month}}</th>
+        </tr>
+        <tr *ngFor="let product of productList;">
+          <td class="long" *ngFor="let summary of product.summary;">{{summary.unitSold}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
 
 <ng-template #commentsModal>
   <div class="modal-header">
-    <!-- <p>Chart</p> -->
-    <h4>Brand XXX Phone -Us</h4>
-    <p>ARIMA</p>
+    <h4>{{chartData.itemName}}</h4>
+    <p>{{chartData.methodology}}</p>
   </div>
   <div class="modal-body">
     <div class="content">
-      <!-- <div class="chart" id="salesTrends"></div> -->
-      <app-line-chart [data]="productList"></app-line-chart>
+      <app-line-chart [data]="chartData"></app-line-chart>
     </div>
 
   </div>

@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-filter',
@@ -16,7 +17,7 @@ export class FilterComponent implements OnInit {
   forecastWeek: any;
   channel: any;
 
-  constructor() { }
+  constructor(private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.minDate = new Date();
@@ -24,16 +25,17 @@ export class FilterComponent implements OnInit {
     this.forecastStartDate = new Date();
     this.historyWeek = '4';
     this.forecastWeek = '4';
-    this.channel = 'onLine';
+    this.channel = '111';
     this.applyChange();
   }
 
   applyChange() {
     this.filterChange.emit({
-      'historyStartDate': this.historyStartDate,
-      'historyWeek': this.historyWeek,
-      'forecastStartDate': this.forecastStartDate,
-      'forecastWeek': this.forecastWeek
+      'historydate': this.historyStartDate,
+      'historyweek': this.historyWeek,
+      'forecastdate': this.forecastStartDate,
+      'forecastweek': this.forecastWeek,
+      'channel': this.channel
     });
   }
 

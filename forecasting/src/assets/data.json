@@ -21,12 +21,6 @@
             {
                 "week": 4,
                 "unitSold": 1400
-            }
-        ],
-        "forecast": [
-            {
-                "week": 1,
-                "unitSold": 1100
             },
             {
                 "week": 2,
@@ -39,6 +33,36 @@
             {
                 "week": 4,
                 "unitSold": 1400
+            },
+            {
+                "week": 2,
+                "unitSold": 800
+            },
+            {
+                "week": 3,
+                "unitSold": 1000
+            },
+            {
+                "week": 4,
+                "unitSold": 1400
+            }
+        ],
+        "forecast": [
+            {
+                "week": 1,
+                "unitSold": 1000
+            },
+            {
+                "week": 2,
+                "unitSold": 400
+            },
+            {
+                "week": 3,
+                "unitSold": 10
+            },
+            {
+                "week": 4,
+                "unitSold": 1300
             }
         ],
         "summary": [

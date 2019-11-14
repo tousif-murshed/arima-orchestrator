@@ -7,9 +7,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build": "ng build --prod --optimization=true",
-    "server": "node server/server.js",
-    "client": "ng build --watch"
+    "build": "ng build --prod --optimization=true"
   },
   "private": true,
   "dependencies": {
