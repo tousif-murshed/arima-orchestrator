@@ -1,0 +1,6 @@
+pandas
+pmdarima
+dnspython
+Flask
+uwsgi
+pymongo

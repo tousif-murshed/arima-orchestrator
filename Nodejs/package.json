@@ -1,0 +1,24 @@
+{
+  "name": "mongo-atlas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/www",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongoose": "5.7.8",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.0",
+    "sync-request": "^6.1.0",
+    "underscore": "^1.9.1"
+  }
+}

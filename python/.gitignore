@@ -1,0 +1,7 @@
+.idea/
+*.csv
+*.json
+__pycache__/
+.tmp
+Pipfile
+Pipfile.lock
