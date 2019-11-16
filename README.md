@@ -13,5 +13,7 @@ This project is a central hub which will take request and conttectes to machine 
 # Project - Python
 
 This project holds ARIMA algorithm which can be called from Node js and generate forecasting data
-	
 
+	- Install python 3.7.4 version 2. Install dependencies pandas, pymongo, pmdarima, flask with command PIP INSTALL <Package>
+	
+	- From the folder /arima-api-master runt he command - python app.py
