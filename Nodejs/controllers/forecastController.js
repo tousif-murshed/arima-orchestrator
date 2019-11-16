@@ -30,15 +30,7 @@ exports.getForecast = function(req,res){
     var forecastNumberOfWeeks = data.forecastweek
     var apiInput={}
     var finalResp = []
-    var itemResp = {
-        itemNumber: '',
-        itemName: '', 
-        channel: '', 
-        methodology: '', 
-        history: [],
-        forecast: [], 
-        summary: []        
-    }
+    
     var weekObj = {
         week: 0,
         unitSold: 0
@@ -56,8 +48,18 @@ exports.getForecast = function(req,res){
             Object.keys(groupData)
                 .forEach(key => { 
                     var jsondata = []
+                    var itemResp = {
+                        itemNumber: '',
+                        itemName: '', 
+                        channel: '', 
+                        methodology: '', 
+                        history: [],
+                        forecast: [], 
+                        summary: []        
+                    }
                     console.log('inside the For Each Key ');
                     itemResp.itemNumber = groupData[key][0].itemNumber
+                    console.log ('Item Number is : ' + groupData[key][0].itemNumber);
                     itemResp.itemName = groupData[key][0].itemName
                     itemResp.channel = groupData[key][0].channel
                     itemResp.methodology = 'ARIMA'
@@ -85,9 +87,10 @@ exports.getForecast = function(req,res){
                     );                    
                     console.log('Response Body : ' + response.body);   
                     var respJson = JSON.parse(response.body);        
-                    console.log('Parsed Body : ' + respJson);            
+                    //console.log('Parsed Body : ' + respJson);            
                     itemResp.forecast = weekFormat(respJson);
                     itemResp.summary = getSummary(respJson);
+                    console.log(' Final Push : ', itemResp);
                     finalResp.push(itemResp);
                 });
             
@@ -102,7 +105,7 @@ exports.getForecast = function(req,res){
 }
 
 function weekFormat(data) {
-    console.log('inside the Weekwise Data ', data);
+    console.log('inside the Weekwise Data ');
     weekwise = [];
     data.forEach((rec) => {
         weekno = moment(rec.date).week();
@@ -122,7 +125,7 @@ function weekFormat(data) {
             weekwise.push(dateTemp);
         }
     });
-    console.log('Week is : ' + weekwise);
+    //console.log('Week is : ' + weekwise);
     return weekwise;
 }
 
@@ -158,7 +161,7 @@ function getSummary(dateData) {
         if (!years.includes(year)) {
             years.push(year);
         }
-        console.log('Month pushed : ', target);
+        //console.log('Month pushed : ', target);
         monthData[shortName].push(target);
     }
     for (year of years) {
@@ -174,7 +177,7 @@ function getSummary(dateData) {
                     "month": month,
                     "unitSold": sum
                 }
-                console.log('Year pushed : ', temp);
+               // console.log('Year pushed : ', temp);
                 result.summary.push(temp);
             }
         }

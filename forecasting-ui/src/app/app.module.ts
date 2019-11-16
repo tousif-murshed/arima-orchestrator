@@ -12,7 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { LineChartComponent } from './componets/line-chart/line-chart.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+
+// added these
+import { MatToolbarModule, MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,11 @@ import { LineChartComponent } from './componets/line-chart/line-chart.component'
     MatFormFieldModule,
     FormsModule,
     HttpClientModule,
+    // added these
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+
     ModalModule.forRoot(),
   ],
   providers: [DatePipe],

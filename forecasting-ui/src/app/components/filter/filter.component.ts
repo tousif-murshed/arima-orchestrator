@@ -38,6 +38,17 @@ export class FilterComponent implements OnInit {
       'channel': this.channel
     });
   }
+  reset() {
+    const historyDate = new Date();
+    const forcastDate = new Date();
+    this.filterChange.emit({
+      'historydate': historyDate,
+      'historyweek': 4,
+      'forecastdate': forcastDate,
+      'forecastweek': 4,
+      'channel': 111
+    });
+  }
 
   // getMinDate() {
   //   return this.addDays(new Date(), 0);
