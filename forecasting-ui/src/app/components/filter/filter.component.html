@@ -38,7 +38,7 @@
     <div class="col-md-3">
       <label>Forecast Start Date  : </label>
       <mat-form-field class="dateField">
-        <input matInput [matDatepicker]="toPicker" [min]="minDate" [(ngModel)]="forecastStartDate">
+        <input matInput [matDatepicker]="toPicker" [min]="maxDate" [(ngModel)]="forecastStartDate">
         <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
         <mat-datepicker #toPicker></mat-datepicker>
       </mat-form-field>
@@ -58,9 +58,9 @@
       <div class="col-md-1">
         <button mat-raised-button (click)="applyChange()">Submit</button>
       </div>
-      <div class="col-md-2">
+      <!-- <div class="col-md-2">
         <button mat-raised-button (click)="reset()">Reset</button>
-      </div>
+      </div> -->
     </div>
   </mat-card-actions>
 </mat-card>
