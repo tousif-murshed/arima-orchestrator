@@ -81,7 +81,7 @@ exports.getForecast = function(req,res){
                     };
                     console.log('Stringified Input : ', JSON.stringify(apiInput));
 
-                    var response = requestSync('POST', 'http://127.0.0.1:5000/forecast',
+                    var response = requestSync('POST', process.env.ARIMA_API,
                         {headers: {'Content-type': 'application/json'},
                         json: apiInput}
                     );                    
