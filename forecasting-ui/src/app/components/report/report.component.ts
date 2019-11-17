@@ -20,8 +20,8 @@ export class ReportComponent implements OnChanges {
   historyStartDate: string;
   forecastStartDate: string;
   productList: any[];
-  // forecastWeeks: any[];
-  // historyWeeks: any[];
+  isRespond = false;
+  errorMsg = '';
 
   modalRef: BsModalRef;
   chartData: any;
@@ -34,17 +34,19 @@ export class ReportComponent implements OnChanges {
     this.historyStartDate = this.datePipe.transform(this.filterData.historydate, 'MM-dd-yyyy');
     this.forecastStartDate = this.datePipe.transform(this.filterData.forecastdate, 'MM-dd-yyyy');
     this.getProductAttributes();
-    // this.historyWeeks = Array(Number(this.filterData.historyWeek)).fill(0).map((x, i) => i);
-    // this.forecastWeeks = Array(Number(this.filterData.forecastWeek)).fill(0).map((x, i) => i);
   }
 
   getProductAttributes() {
     this.filterData.historydate = this.historyStartDate;
     this.filterData.forecastdate = this.forecastStartDate;
-
+    this.isRespond = false;
+    this.errorMsg = '';
     this.service.getProductAttributes(this.filterData).subscribe(data => {
+      this.isRespond = true;
       this.productList = data;
     }, error => {
+      this.isRespond = true;
+      this.errorMsg = 'Problem due to some technical issue. Please try again later.';
       console.log('Error occured ' + error);
     });
   }
