@@ -3,13 +3,10 @@ var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
 
 var apiRouter = require('./routes/api');
-console.log(process.env.CONNECTION_URL);
-mongoose.connect('mongodb+srv://default:gIt0f8tDqjnvnJfr@cluster0-um8zf.azure.mongodb.net/history?retryWrites=true&w=majority',
-    { useNewUrlParser:true, useUnifiedTopology:true},
+mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser:true, useUnifiedTopology:true},
     function(err){
     if(!err){
         console.log('DB Connected');
-        //mongoose.disconnect();
     }
     else{
         console.log(err)
