@@ -19,6 +19,6 @@
     "nodemon": "^1.19.4",
     "request": "^2.88.0",
     "sync-request": "^6.1.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
